@@ -1015,11 +1015,9 @@ function HttpAccessory(log, config)
 
 	  }
 	  {
-<<<<<<< HEAD
-            blindurl = this.base_url + "/blinds_level";
-=======
+
             var blindurl = this.base_url + "/blinds_level";
->>>>>>> 387e6a501b97d388eaa330b263b11ba45260c62f
+
             var blindposemitter = pollingtoevent(function(done)
 		    				{
 		    				  that.httpRequest(blindurl, "", "GET", that.username, that.password, that.sendimmediately,
@@ -1047,11 +1045,8 @@ function HttpAccessory(log, config)
                                    return;
 
                                  that.blindPosition = parseInt(data);
-<<<<<<< HEAD
-                                 that.log(that.service, "received blind position ",blindurl, " blind position level is currently", data);
-=======
+
                                  that.log(that.service, "received blind position ",blindurl, " blind level is currently", data);
->>>>>>> 387e6a501b97d388eaa330b263b11ba45260c62f
 
                                  that.enableSetState = false;
                                  that.blindsService.getCharacteristic(Characteristic.CurrentPosition).setValue(that.blindPosition);
